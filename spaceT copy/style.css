@@ -1,0 +1,527 @@
+@import url('https://fonts.googleapis.com/css2?family=Bellefair&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100dvh;
+    background-image: url(./assets/home/background-home-desktop.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow: hidden;
+}
+
+a{
+    font-family: "Barlow Condensed", sans-serif;
+    text-decoration: none;
+}
+
+nav{
+    margin-top: 40px;
+    padding-left: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .logo{
+    position: relative;
+}
+
+nav .logo::after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 180px;
+    width: 473px;
+    height: 1px;
+    background-color: #979797;
+}
+
+nav ul{
+    width: 830px;
+    height: 96px;
+    background-color: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(82px);
+    display: flex;
+    align-items: center;
+    padding-inline: 124px 164px;
+    gap: 40px;
+    font-size: 1rem;
+}
+
+nav ul a{
+    color: white;
+    letter-spacing: 2.7px;
+    text-transform: uppercase;
+    position: relative;
+}
+
+nav ul a span{
+    font-weight: 600;
+    margin-right: 0.4rem;
+}
+
+nav ul a.active::after,nav ul a::after{
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    bottom: -38px;
+    transition: width 0.45s ease;
+}
+
+nav ul a::after{
+    background-color: #979797;
+    width: 0;
+}
+
+nav ul a:hover::after{
+    width: 100%;
+}
+
+#home{
+    margin-top: 251px;
+}
+
+#destination, #crew, #technology{
+    margin-top: 120px;
+}
+
+main{
+    width: 100%;
+    padding-inline: 165px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero{
+    display: none;
+}
+
+.show{
+    display: flex;
+}
+
+.main-left{
+    max-width: 444px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#home .main-left h3,h1{
+    animation: fadeIn 0.7s ease-in-out forwards;
+}
+
+.main-left h3{
+    font-size: 28px;
+    letter-spacing: 4.72px;
+    font-family:  "Barlow Condensed", sans-serif;
+    font-weight: normal;
+    color: #D0D6F9;
+}
+
+.main-left h1{
+    font-size: 10.75rem;
+    margin-block: 20px;
+    font-family: "Bellefair", sans-serif;
+    color: white;
+    font-weight: 400;
+}
+
+#home .main-left p{
+    font-size: 18px;
+    font-family: "Barlow", sans-serif;
+    line-height: 32px;
+    color: #D0D6F9;
+    animation:fadeUp 0.7s ease-in-out forwards;
+}
+
+#home .main-right a{
+    width: 274px;
+    height: 274px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: white;
+    box-shadow: 0px 0px 0px 85px rgba(255, 255, 255, 0);
+    font-size: 32px;
+    letter-spacing: 2px;
+    color: #0B0D17;
+    font-family: "Bellefair", sans-serif;
+    text-transform: uppercase;
+    transition: box-shadow 0.45s ease;
+}
+
+#home .main-right a:hover{
+    box-shadow: 0px 0px 0px 85px rgba(255, 255, 255, 0.3);
+}
+
+.tittle{
+    font-size: 28px;
+    color: #D0D6F9;
+    letter-spacing: 2px;
+    font-family:   "Barlow Condensed", sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+}
+
+
+.tittle span{
+    margin-right: 30px;
+    color: #979797;
+}
+
+#destination .main-right img{
+    margin-left: 5rem;
+    animation: fadeIn 0.7s ease-in-out forwards;
+}
+
+#destination .tittle{
+    animation: fadeIn 0.7s ease forwards;
+}
+
+.dest-nav{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    animation: fadeIn 0.7s ease-out forwards;
+}
+.dest-nav a{
+    color: #D0D6F9;
+    font-size: 16px;
+    line-height: 24px;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    position: relative;
+    padding-bottom: 4px;
+}
+
+.dest-nav a::after, .dest-nav a.actives::after{
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    bottom: 0px;
+}
+
+.dest-nav a::after{
+    background-color: #979797;
+    width: 0;
+    transition: width 0.5s ease-out;
+}
+
+.dest-nav a:hover::after{
+    width: 100%;
+}
+
+#destination  h2{
+    font-size: 100px;
+    font-family:  "Bellefair", sans-serif;
+    color: white;
+    font-weight: 400;
+    line-height: 150px;
+    text-transform: uppercase;
+    animation: fadeInn 0.7s ease-out forwards;
+}
+
+#destination  p{
+    font-size: 18px;
+    line-height: 32px;
+    color: #D0D6F9;
+    font-family: "Barlow", sans-serif;
+    margin-bottom: 40px;
+    animation: fadeOut 0.7s ease-in-out forwards;
+}
+
+#destination .dist-infor{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid #383b4c;
+    padding-top: 28px;
+    margin-top: 48px;
+}
+
+#destination .dist-infor div{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#destination .dist-infor div:nth-child(1){
+    animation: fadeIn 0.7s ease-in-out forwards;
+}
+
+#destination .dist-infor div:nth-child(2){
+    animation: fadeOut 0.7s ease-in-out forwards;
+}
+
+#destination .dist-infor div span{
+    color: #D0D6F9;
+    font-family: "Barlow Condensed", sans-serif;
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 2px;
+}
+
+#destination .dist-infor div h3{
+    font-size: 28px;
+    font-family:  "Bellefair", sans-serif;
+    line-height: 42px;
+    font-weight: 400;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: -2px;
+}
+
+#crew{
+    height:79vh;
+}
+#crew .main-left{
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    margin-bottom: 5rem;
+}
+
+#crew .tittle{
+    animation: fadeIn 0.7s ease-in-out forwards;
+}
+
+#crew .main-left h2{
+    font-size: 40px;
+    font-family:  "Bellefair", sans-serif;
+    text-transform: uppercase;
+    color: white;
+    font-weight: 400;
+    margin-bottom: 28px;
+    /* line-height: 150px; */
+    animation: fadeInn 0.7s ease-in-out forwards;
+}
+
+#crew .main-left h2 span{
+    font-size: 24px;
+    color: #D0D6F9;
+    margin-bottom: 16px;
+}
+
+
+.crew-toggle{
+    display: flex;
+    align-items: center;
+    gap: 1.8rem;
+    animation: fadeDown 0.7s ease-in-out forwards;
+}
+
+.crew-toggle div{
+    width: 16px;
+    height: 16px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.crew-toggle div.toggle-active{
+    background-color: #D0D6F9;
+    transition: all 0.4s linear;
+}
+
+#crew .main-right{
+    overflow:hidden;
+}
+#crew .main-right img{
+    position: relative;
+    /* background-color: white; */
+    bottom: -110px;
+    animation: fadeUp 0.7s ease forwards;
+
+}
+
+#crew .crew-infor{
+    animation: fadeUp 0.7s ease forwards;
+}
+
+.crew-infor p{
+    font-size: 18px;
+    line-height: 32px;
+    color: #D0D6F9;
+    font-family: "Barlow", sans-serif;
+    margin-bottom: 40px;
+    animation: fadeUp 0.7s ease forwards;
+}
+
+#technology{
+    flex-direction: column;
+    align-items: start;
+}
+
+.tech-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    /* margin-top: 80px; */
+
+}
+
+#technology .tittle{
+    animation: fadeIn 0.7s ease forwards;
+}
+
+#technology .main-left{
+    margin-right: 130px;
+    max-width: 630px;
+    width: 100%; 
+}
+
+.main-left-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+}
+
+#technology .tech-nav{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    animation: fadeDown 0.7s ease forwards;
+}
+.tech-nav div{
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 32px;
+    cursor: pointer;
+    font-family: "Bellefair", sans-serif;
+}
+
+.tech-nav div.active{
+    background-color: white;
+    color: #0c0e18;
+}
+
+.main-left-text{
+    margin-left: 80px; 
+    animation: fadeOut 0.7s ease forwards;
+}
+
+.main-left-text span{
+    font-size: 16px;
+    color: #D0D6F9;
+    font-family: "Barlow Condensed", sans-serif;
+    text-transform: uppercase;
+    /* margin-bottom: 24px; */
+}
+
+.main-left-text h2{
+    font-size: 56px;
+    font-family: "Bellefair", sans-serif;
+    margin-bottom: 40px;
+    color: white;
+    font-weight: normal;
+    text-transform: uppercase;
+    margin-top: 24px;
+}
+
+.main-left-text p{
+    font-size: 18px;
+    font-family: "Barlow", sans-serif;
+    line-height: 32px;
+    color: #D0D6F9;
+    /* animation:fadeUp 0.7s ease forwards; */
+}
+
+#technology .main-right img{
+    animation: fadeUp 0.7s ease forwards;
+}
+
+
+
+
+/* Animations */
+
+#home .main-right{
+    animation: fadeOut 0.5s ease-in-out forwards;
+}
+
+
+@keyframes  fadeIn{
+    from{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    to{
+        transform: none;
+        opacity: 1;
+    }
+}
+
+@keyframes  fadeInn{
+    from{
+        transform: translateX(-10px);
+        opacity: 0;
+    }
+    to{
+        transform: none;
+        opacity: 1;
+    }
+}
+
+@keyframes  fadeOut{
+    from{
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    to{
+        transform: none;
+        opacity: 1;
+    }
+}
+@keyframes  fadeUp{
+    from{
+        transform: translateY(90px);
+        opacity: 0;
+    }
+    to{
+        transform: none;
+        opacity: 1;
+    }
+}
+@keyframes  fadeDown{
+    from{
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to{
+        transform: none;
+        opacity: 1;
+    }
+}
+
+
+

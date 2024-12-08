@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 100dvh;
+            display: grid;
+            place-content: center;
+        }
+
+        /* @media and (max-width: 199px) {
+            
+        } */
+
+        .amount,.interest{
+            width: 240px;
+            height: 45px;
+            border: 1px solid #3333;
+            display: flex;
+            align-items: center;
+        }
+
+        .amount{
+            margin-bottom: 20px;
+        }
+        span{
+            background-color: rgb(173, 202, 255);
+            height: 100%;
+            width: 20%;
+            display: grid;
+            place-content: center;
+        }
+
+        input{
+            width: 80%;
+            /* height: 100%; */
+            outline: none;
+            border: 0;
+            padding-left: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="amount">
+        <span>$</span>
+        <input type="number" name="" id="">
+    </div>
+    <div class="interest">
+        <span>¢</span>
+        <input type="number" name="" id="">
+    </div>
+    <script>
+        let dollarBox = document.querySelector('.amount input');
+        let cedisBox = document.querySelector('.interest input');
+        let dollarRate = 14.87;
+
+        console.log(dollarBox, cedisBox)
+
+        dollarBox.value = 1;
+        cedisBox.value = dollarRate;
+
+
+        dollarBox.addEventListener('input', ()=>{
+            if(dollarBox.value == ""){
+                cedisBox.value = "";
+            }else{
+                cedisBox.value = (dollarBox.value * dollarRate).toFixed(2);
+            }
+
+        });
+
+        cedisBox.addEventListener('input', ()=>{
+            dollarBox.value = (cedisBox.value / dollarRate).toFixed(2);
+        })
+    </script>
+</body>
+</html>
